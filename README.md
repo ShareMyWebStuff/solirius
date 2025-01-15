@@ -35,6 +35,8 @@ PORT=8000
 
 npm run test
 
+All the tests are located in the __tests__ directory under the src folder. I have created e2e tests for the file upload testing and unit tests for the datastore which is just a simple Map store.
+
 ## Test Coverage
 
 I havent completed the test coverage but believe I have covered the requirements.
