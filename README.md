@@ -68,3 +68,9 @@ I havent completed the test coverage but believe I have covered the requirements
 | check-file-exists.ts   | 78.94   | 50       | 100     | 77.77   | 34-35,42-43       |
 | logger.ts              | 100     | 50       | 100     | 100     | 20-22             |
 | service-response.ts    | 100     | 100      | 100     | 100     |
+
+## Challenges
+
+The coding challenge expected a response to state that the upload had started. This is something I would expect to do on a socket, not os REST. I was  surprised that stackoverflow said you could do this with a res.write (...). I spent ages trying to get this working and eventually logged it as it wouldnt work.
+
+csv-parser complained of a BOM character at the start, I imported a bom stripper package and found this worked. I then replaced this with fast-csv which handles BOM characters.
