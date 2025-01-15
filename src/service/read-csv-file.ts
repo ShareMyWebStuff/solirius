@@ -1,9 +1,6 @@
 import { logger } from '@/utils/logger';
 import * as fs from 'fs';
 import { parse } from 'fast-csv';
-// import csv from 'csv-parser';
-// import stripBom from 'strip-bom-stream';
-// import stripBom from 'strip-bom-stream';
 
 type RowData = {
   name: string;
@@ -60,25 +57,4 @@ export const readCsvFile = (filepath: string): Promise<ReadCsvFileRes> => {
       });
   });
 
-  // const fileLoad = fs.createReadStream(filepath).pipe(stripBom()).pipe(csv());
-
-  // return new Promise((resolve, reject) => {
-  //   fileLoad.on('data', (eachRow) => {
-  //     retStatus.records.details.push(eachRow as RowData);
-  //     if (!eachRow.name || !eachRow.email) {
-  //       retStatus.success = false;
-  //       retStatus.message = 'Not all columns are defined in the file.';
-  //     }
-  //   });
-
-  //   fileLoad.on('end', () => {
-  //     retStatus.records.totalRecords = retStatus.records.details.length;
-  //     resolve(retStatus);
-  //   });
-
-  //   fileLoad.on('error', (err) => {
-  //     logger.error('Error reading the csv file.', err);
-  //     reject(retStatus);
-  //   });
-  // });
 };
